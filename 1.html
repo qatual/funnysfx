@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>sfx helper - videos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #111;
+      color: #eee;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .top-bar {
+      margin-bottom: 30px;
+    }
+    .btn-link {
+      display: inline-block;
+      margin-left: 20px;
+      vertical-align: middle;
+      font-size: 1.1em;
+      padding: 8px 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      user-select: none;
+    }
+    .btn-link:hover {
+      background-color: #3399ff;
+    }
+    .sfx {
+      background: #1e1e1e;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    .sfx-title {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #fff;
+    }
+    .sfx-button {
+      font-size: 0.9em;
+      padding: 8px 12px;
+      margin-top: 8px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .sfx-button:hover {
+      background-color: #3399ff;
+    }
+    video {
+      margin-top: 10px;
+      width: 100%;
+      max-height: 300px;
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 1.3em;
+      color: #888;
+    }
+    .rainbow-animated {
+      background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 1000% 1000%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbowFlow 5s linear infinite;
+      display: inline-block;
+      font-weight: bold;
+    }
+    @keyframes rainbowFlow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    a {
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function copyToClipboard(link) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(() => {
+          alert('Copied to clipboard: ' + link);
+        }).catch(() => {
+          prompt('Copy this link:', link);
+        });
+      } else {
+        prompt('Copy this link:', link);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="top-bar">
+    <h1>welcome to sfx helper!</h1>
+    <a href="index.html" class="btn-link">audio version</a>
+  </div>
+
+  <div class="sfx">
+    <div class="sfx-title">supa! -brunys</div>
+    <button class="sfx-button" onclick="copyToClipboard('https://sfx.soloo.fun/videos/supa!.mp4')">get meme link</button>
+    <video controls src="videos/supa!.mp4"></video>
+  </div>
+
+  <div class="sfx">
+    <div class="sfx-title">nope your to late i already died (meme vers) -wifiskeleton</div>
+    <button class="sfx-button" onclick="copyToClipboard('https://sfx.soloo.fun/videos/wifiskeleton.mp4')">get meme link</button>
+    <video controls src="videos/wifiskeleton.mp4"></video>
+  </div>
+
+  <footer>
+    site by <a href="https://soloo.win" target="_blank"><span class="rainbow-animated">soloo</span></a> &lt;3
+  </footer>
+</body>
+</html
